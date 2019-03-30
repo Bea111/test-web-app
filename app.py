@@ -1,13 +1,13 @@
 from flask import Flask, render_template, request
 import opinion
 
-
-app= Flask ("App")
+app= Flask ("app")
 
 
 @app.route("/")
 def hello():
-    return render_template("index.html")
+    mindful_tweets=opinion.tweet_main()
+    return render_template("index.html",tweets=mindful_tweets)
 
 @app.route("/<string:name>")
 def hello_someone(name):
@@ -20,11 +20,14 @@ def signup():
     return f"Thanks for signing up with email address {email}"
 
 @app.route("/form", methods=["POST"])
-def form():
+def signup_form():
     data=request.form
-    fname= form_data["firstname"]
-    lname= form_data["lastname"]
-    return f"Thanks for submitting a form {firstname}"
+    fname= data["firstname"]
+    lname= data["lastname"]
+    return f"Thanks for submitting a form {fname}"
+
+if __name__ =="__main__":
+    app.run(debug=True)
 
 
 
