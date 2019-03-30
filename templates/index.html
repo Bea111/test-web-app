@@ -2,18 +2,66 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="static/css/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="/static/js/main.js" type="text/javascript" charset="UTF-8"></script>
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
 
     <title>My Flask app page-Breathe</title>
+
   </head>
+
   <body>
 
+    <!--Navbar-->
+<nav class="navbar navbar-light light-blue lighten-4">
+
+  <!-- Navbar brand -->
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+        class="fas fa-bars fa-1x"></i></span></button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+    </ul>
+    <!-- Links -->
+
+  </div>
+  <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+
     {% if name %}
-      <p>Hello {{name}}!</p>
+      <h1>Hello {{name}}!</h1>
 
     {% else %}
-      <p>Hello stranger!</p>
+      <h1>Hello stranger!</h1>
 
     {% endif %}
          <p>Let's keep in touch</p>
@@ -63,8 +111,85 @@
   {% endfor %}
   </table>
   </div>
-</div>
 
+
+<div ng-controller="mainCtrl as vm" class="app-container">
+  <main>
+    <section class="view">
+      <section class="bubbles-container">
+        <bubbles class="bubbles" ng-class="{ start: vm.start }" bubbles-config-default="{
+      'floatTimeMax': 5,
+      'floatTimeMin': 2,
+      'bubbleSizeMax': 90,
+      'bubbleSizeMin': 50,
+      'timeBetweenMax': 2,
+      'timeBetweenMin': 0,
+      'bubbleFrequency': 750,
+      'numBackgroundBubbles': 10,
+      'bubbles': [{
+        title: 'Angular JS',
+      },
+      {
+        title: 'Underscore JS',
+      },
+      {
+        title: 'PHP',
+      },
+      {
+        title: 'HTML5',
+      },
+      {
+        title: 'JavaScript',
+      },
+      {
+        title: 'JSON',
+      },
+      {
+        title: 'CSS3',
+      },
+      {
+        title: 'jQuery',
+      },
+      {
+        title: 'SFDC',
+      },
+      {
+        title: 'QAD'
+      },
+      {
+        title: 'SQL Server',
+      },
+      {
+        title: 'Linux',
+      },
+      {
+        title: 'JIRA',
+      },
+      {
+        title: 'OSX',
+      },
+      {
+        title: 'hi'
+      },
+      {
+        title: 'hi'
+      },
+      {
+        title: 'heel'
+      },
+      {
+        title: 'hello'
+      },
+      {
+        title: 'hello',
+      },
+      {
+        title: 'Hello',
+      }]}" vm="vm"></bubbles>
+      </section>
+    </section>
+  </main>
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

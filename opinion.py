@@ -1,8 +1,7 @@
-from flask import Flask, request, render_template
+from flask import Flask, render_template
 import requests
 app= Flask ("app")
 import tweepy
-import requests
 import json
 from tweepy import Cursor
 
@@ -32,7 +31,7 @@ def tweet_main():
     response=[]
     for tweet in tweets:
         response.append(tweet.user.name + ':' + tweet.text)
-    return response 
+    return response
 
 
 
