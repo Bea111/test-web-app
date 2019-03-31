@@ -18,7 +18,7 @@ def signup():
     return render_template("contact.html", f"Thanks for signing up with email address {email}"
 
 @app.route("/form", methods=["POST"])
-def signup_form():
+def form():
     data=request.form
     fname= data["firstname"]
     lname= data["lastname"]

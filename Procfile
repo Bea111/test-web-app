@@ -1,1 +1,1 @@
-web:gunicorn app:app https://radiant-journey-14483.herokuapp.com/
+web:gunicorn app:app https://breatheapp.herokuapp.com/
