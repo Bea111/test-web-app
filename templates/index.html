@@ -1,160 +1,72 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en" class="full-height">
+
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/my_app/">
-    <script src="/Users/beatrice/Desktop/Python/my_app/static/js/main.js" type="text/javascript" charset="UTF-8"></script>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="/Users/beatrice/Desktop/Python/my_app/static/css/style.css" >
+    <title>Breathe</title>
 
+</head>
 
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark black">
+   <div class="container">
+     <a class="navbar-brand" href="#"><strong>Breathe</strong></a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav mr-auto">
+         <li class="nav-item active">
+           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="advice.html">Mindfulness Techniques</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="contact.html">Contact Us</a>
+         </li>
+       </ul>
+     </div>
+   </div>
+ </nav>
 
+ <div class="view intro-2">
+   <div class="full-bg-img">
+     <div class="mask rgba-black-strong flex-center">
+       <div class="container">
+         <div class="white-text text-center wow fadeInUp">
+           <h2>Taking a breather</h2>
+           <h5>A place for mindful thoughts</h5>
+           <br>
+           <p>Use this website to find out about mindfulness techniques. Browse our mindful tweets, and research the latest advice for living a more mindful life.</p>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
 
+</header>
+<!--Main Navigation-->
 
-    <title>My Flask app page-Breathe</title>
-
-  </head>
-
-  <body>
-
-    <!--Navbar-->
-<nav class="navbar navbar-light light-blue lighten-4">
-
-  <!-- Navbar brand -->
-  <a class="navbar-brand" href="#">Breathe</a>
-
-  <!-- Collapse button -->
-  <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
-        class="fas fa-bars fa-1x"></i></span></button>
-
-  <!-- Collapsible content -->
-  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-
-    <!-- Links -->
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" <a href="../index.html">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../cloud.html">Word Cloud</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../advice.html">Advice Generator</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link"> <a href="http://localhost:5000/contact.html">Contact us</a>
-      </li>
-    </ul>
-    <!-- Links -->
-
-  </div>
-  <!-- Collapsible content -->
-
-</nav>
-<!--/.Navbar-->
-
-    {% if name %}
-      <h1>Hello {{name}}!</h1>
-
-    {% else %}
-      <h1>Hello stranger!</h1>
-
-    {% endif %}
+<body>
 
 
 <div class= "container">
-
-
-    <table class="table table-striped">
-
-      <th> Mindfulness Tweets: <strong>Top tweets of the hour </strong></th>
-
-
+  <table class="table table-striped">
+    <th> Mindfulness Tweets: <strong>Top tweets of the hour </strong></th>
       {% for tweet in tweets %} <tr> <td>
       {{ tweet }} <br> <br>
     </td> </tr>
   {% endfor %}
   </table>
-  </div>
-
-<div ng-controller="mainCtrl as vm" class="app-container">
-  <main>
-    <section class="view">
-      <section class="bubbles-container">
-        <bubbles class="bubbles" ng-class="{ start: vm.start }" bubbles-config-default="{
-      'floatTimeMax': 5,
-      'floatTimeMin': 2,
-      'bubbleSizeMax': 90,
-      'bubbleSizeMin': 50,
-      'timeBetweenMax': 2,
-      'timeBetweenMin': 0,
-      'bubbleFrequency': 750,
-      'numBackgroundBubbles': 10,
-      'bubbles': [{
-        title: 'Angular JS',
-      },
-      {
-        title: 'Underscore JS',
-      },
-      {
-        title: 'PHP',
-      },
-      {
-        title: 'HTML5',
-      },
-      {
-        title: 'JavaScript',
-      },
-      {
-        title: 'JSON',
-      },
-      {
-        title: 'CSS3',
-      },
-      {
-        title: 'jQuery',
-      },
-      {
-        title: 'SFDC',
-      },
-      {
-        title: 'QAD'
-      },
-      {
-        title: 'SQL Server',
-      },
-      {
-        title: 'Linux',
-      },
-      {
-        title: 'JIRA',
-      },
-      {
-        title: 'OSX',
-      },
-      {
-        title: 'hi'
-      },
-      {
-        title: 'hi'
-      },
-      {
-        title: 'heel'
-      },
-      {
-        title: 'hello'
-      },
-      {
-        title: 'hello',
-      },
-      {
-        title: 'Hello',
-      }]}" vm="vm"></bubbles>
-      </section>
-    </section>
-  </main>
+  <!-- <table class="table table-striped"> <tr><td>aaa</td></tr> <tr><td>bbb></td></tr> <tr><td>ccc</td></tr> </table> -->
 </div>
+
 
 <!-- Footer -->
 <footer class="page-footer font-small blue-grey lighten-5">
@@ -289,8 +201,6 @@
 
   </footer>
   <!-- Footer -->
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!-- jQuery library/java -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -298,7 +208,5 @@
 
 
 
-
-
-  </body>
+</body>
 </html>

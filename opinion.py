@@ -24,7 +24,7 @@ date_since = "2018-11-16"
 
 tweets = tweepy.Cursor(twitter_api.search,
     q = search_words,
-    lang = "en").items(10)
+    lang = "en").items(7)
 #Iterate on tweets
 def tweet_main():
     response=[]
