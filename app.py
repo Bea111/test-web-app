@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 import opinion
+import requests
 
 app= Flask ("app")
 
@@ -9,22 +10,20 @@ def hello():
     mindful_tweets=opinion.tweet_main()
     return render_template("index.html",tweets=mindful_tweets)
 
-@app.route("/<string:name>")
-def hello_someone(name):
-    return render_template("index.html",name=name.title())
 
 @app.route("/signup", methods=["POST"])
 def signup():
     form_data=request.form
     email=form_data["email"]
-    return f"Thanks for signing up with email address {email}"
+    return render_template("contact.html", f"Thanks for signing up with email address {email}"
 
 @app.route("/form", methods=["POST"])
 def signup_form():
     data=request.form
     fname= data["firstname"]
     lname= data["lastname"]
-    return f"Thanks for submitting a form {fname}"
+    return render_template("contact.html", f"Thanks for submitting a form {fname}"
+
 
 if __name__ =="__main__":
     app.run(debug=True)

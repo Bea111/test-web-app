@@ -1,14 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Exo+2:200);
-@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
-* {
-  box-sizing: border-box;
-}
 
 h1 {
     color: red;
     font-variant-caps: all-small-caps;
     font-size: 10px;
 }
+
 
 /*Navbar */
 .fa-1x {
