@@ -1,1 +1,1 @@
-web:gunicorn app:app https://breatheapp.herokuapp.com/
+web:gunicorn app:app 
