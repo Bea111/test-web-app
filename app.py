@@ -1,6 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import opinion
-import requests
 
 app= Flask ("app")
 
@@ -26,5 +25,10 @@ if __name__ =="__main__":
     app.run(debug=True)
 
 
+
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 # })
