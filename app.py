@@ -19,7 +19,7 @@ def form():
     form_data=request.form
     fname= form_data["firstname"]
     lname= form_data["lastname"]
-    return f"Thanks for submitting a form {fname}"
+    return f"Thank you for sharing your mindfulness techniques {fname}. We will review your document and add it to our page. Please keep updated on our live tweet feed. And {fname}... remember to stop and breathe once in a while..."
 
 if __name__ =="__main__":
     app.run(debug=True)

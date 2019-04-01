@@ -4,39 +4,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>My Flask app page-Breathe</title>
+<header>
 
-    <nav class="navbar navbar-expand-lg navbar-dark black">
-   <div class="container">
-     <a class="navbar-brand" href="#"><strong>Breathe</strong></a>
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-     </button>
-     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-       <ul class="navbar-nav mr-auto">
-         <li class="nav-item active">
-           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link" href="advice.html">Mindfulness Techniques</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link" href="contact.html">Contact Us</a>
-         </li>
-       </ul>
+  <header>
+      <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark-blue">
+
+       <a class="navbar-brand" href="#index.html"><strong>Breathe</strong></a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto">
+           <li class="nav-item active">
+             <a class="nav-link" href="advice.html">Mindfulness Techniques <span class="sr-only">(current)</span></a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
+           </li>
+         </ul>
+       </div>
      </div>
-   </div>
-  </nav>
-</head>
+   </nav>
+
+ </header>
+
 
 <body>
 
 
-<p>Let's keep in touch</p>
+<h2><strong><center>Share your mindfulness techniques with us here<center><strong></h2>
+  <h4><center>We will include your documents in our mindfulness techniques page. We value your ideas and hope you will share any ideas you have!<center></h4>
    <div id="contact-form">
+  <div class="row justify-content-center">
    <form method="post" action="/form">
-     <label for="email">Email address</label>
-     <input type="email" id="email" name="email">
+     <br>
+
 
 
   <div class="form group">
@@ -48,7 +52,7 @@
       <input type="text" name="lastname" class="form-control" id="secondnameinput" placeholder="Second Name">
       </div>
 <div class="form group">
-  <label for="file upload">Upload mindfulness</label>
+  <label for="file upload">Upload mindfulness documents</label>
   <input type="file" id="exampleInputFile">
   <p class="help-block">Please submit your details</p>
 </div>
