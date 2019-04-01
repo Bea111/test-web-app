@@ -1,12 +1,16 @@
 .view {
-    background: url("https://www.urmc.rochester.edu/MediaLibraries/URMCMedia/mindful-practice/images/balanced-stones.jpg")no-repeat center center;
-    background-size: cover;
+    background-image: url("https://www.urmc.rochester.edu/MediaLibraries/URMCMedia/mindful-practice/images/balanced-stones.jpg")no-repeat center center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size:100%;
+    background-position:top center;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .view {
         overflow: visible;
         margin-top: -56px;
+        color: black;
     }
   }
 
