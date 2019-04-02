@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='css/style.css') }}" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}" media="screen">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -12,7 +12,7 @@
 <style type="text/css" media="screen">
 
 .view {
-    background-image: "{{ url_for ('static', filename='images/balanced-stones.jpg') }}";
+    background-image: "{{ url_for('static', filename='images/balanced-stones') }}";
     background-repeat: no-repeat;
     position: relative;
     background-size:100%;
@@ -27,7 +27,7 @@
     <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark-blue">
 
-     <a class="navbar-brand" href="#index.html"><strong>Breathe</strong></a>
+     <a class="navbar-brand" href="{{ url_for('index') }}"><strong>Breathe</strong></a>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@
      <div class="collapse navbar-collapse" id="navbarSupportedContent">
        <ul class="navbar-nav mr-auto">
          <li class="nav-item active">
-           <a class="nav-link" href="advice.html">Mindfulness Techniques <span class="sr-only">(current)</span></a>
+           <a class="nav-link" href="{{ url_for('advice') }}">Mindfulness Techniques <span class="sr-only">(current)</span></a>
          </li>
          <li class="nav-item">
            <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
@@ -63,7 +63,7 @@
            <br>
            <br>
            <br>
-           <p><strong>Welcome to ...Breathe... This space is for you to discover new mindfulness techniques and share your own. Take a pause from daily life... put on the kettle... and browse our live mindfulness tweet feed. Immerse yourself in all the mindful thoughts shared by our community... contribute your own ideas. <strong></p>
+           <p><strong>Welcome to ...Breathe... This space is for you to discover new mindfulness techniques and share your own. Take a pause from daily life... put on the kettle... and browse our live mindfulness tweet feed. Immerse yourself in all the mindful thoughts shared by our community ... and contribute your own ideas. <strong></p>
          </div>
        </div>
      </div>
