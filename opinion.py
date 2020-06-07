@@ -16,8 +16,8 @@ auth.set_access_token (access_token,  access_token_secret)
 twitter_api  =  tweepy.API(auth)
 
 #Search tweets
-search_words = "#mindfulness"
-date_since = "2018-11-16"
+search_words = "#springwatch"
+date_since = "2020-06-01"
 
 #Collect tweets
 
